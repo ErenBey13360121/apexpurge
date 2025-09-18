@@ -84,7 +84,7 @@ const Hero = () => {
         {/* Tema bazlı dinamik gradient vurgusu */}
         <span
           className={cn(
-            'relative bg-gradient-to-r from-primary bg-clip-text
+            'relative bg-gradient-to-r from-primary bg-clip-text'
              text-5xl font-extrabold text-transparent lg:text-8xl',
             theme === 'orange'  && 'to-rose-600',
             theme === 'blue'    && 'to-purple-600',
