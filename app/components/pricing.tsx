@@ -1,3 +1,4 @@
+import React from 'react'
 import { CheckIcon } from 'lucide-react'
 import { Button } from './ui/button'
 import { Switch } from './ui/switch'
@@ -16,30 +17,30 @@ const Pricing = () => {
                 <div>
                     <span className='rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:bg-primary/25'>
                         <span className='brightness-[1.7]'>
-                            Adaptable Pricing
+                            Esnek Fiyatlandırma
                         </span>
                     </span>
                     <h1 className='mt-4 scroll-m-20 font-inter text-4xl font-extrabold tracking-tight lg:text-5xl'>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            Choose{' '}
+                            Size uygun{' '}
                         </span>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            your{' '}
+                            planı{' '}
                         </span>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            plan
+                            seçin
                         </span>
                     </h1>
                 </div>
                 <p className='text-lg text-muted-foreground'>
-                    Select the ideal plan for your business requirements
+                    İş ihtiyaçlarınıza en uygun planı seçin
                 </p>
                 <div className='mt-20 flex items-center justify-center space-x-2'>
                     <Label
                         htmlFor='price-toggle'
                         className={cn(checked && 'text-muted-foreground')}
                     >
-                        Monthly
+                        Aylık
                     </Label>
                     <Switch
                         id='price-toggle'
@@ -47,157 +48,157 @@ const Pricing = () => {
                         checked={checked}
                         onCheckedChange={() => setChecked(!checked)}
                         className='data-[state=unchecked]:bg-primary'
-                        aria-label='toggle pricing'
+                        aria-label='fiyatlandırma geçişi'
                     />
                     <Label
                         htmlFor='price-toggle'
                         className={cn(!checked && 'text-muted-foreground')}
                     >
-                        Annually
+                        Yıllık
                     </Label>
                 </div>
                 <div className='mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-around lg:px-6'>
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-bl from-primary/10 via-transparent to-transparent p-8 text-left before:bg-gradient-to-bl before:from-primary/30 before:to-primary/5 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
-                            <p>Basic</p>
+                            <p>Temel</p>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
-                                    $
+                                    ₺
                                 </span>
                                 <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
                                     0
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Ideal for startups and small businesses
+                                Girişimler ve küçük işletmeler için ideal
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4'>
                             <li className='flex gap-2'>
                                 <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Up to 10 team members</span>
+                                <span>10 kullanıcıya kadar</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>50GB of cloud storage</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>50GB bulut depolama</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Streamlined operations</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Kolaylaştırılmış işlemler</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Workflow optimization</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>İş akışı optimizasyonu</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Basic analytics</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Temel analizler</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Email support</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>E-posta desteği</span>
                             </li>
                         </ul>
                         <Button className='mt-8 w-full' variant={'outline'}>
-                            Get started
+                            Başlayın
                         </Button>
                     </div>
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
-                            <p>Pro</p>
+                            <p>Profesyonel</p>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
-                                    $
+                                    ₺
                                 </span>
                                 <span className='flex items-center gap-2 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
                                     {checked ? '299' : '29'}
                                     {checked && (
                                         <Badge variant={'outline'}>
-                                            SAVE 15%
+                                            %15 İNDİRİM
                                         </Badge>
                                     )}
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Perfect for growing businesses
+                                Büyüyen işletmeler için mükemmel
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4 text-left'>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Up to 50 team members</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>50 kullanıcıya kadar</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>250GB of cloud storage</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>250GB bulut depolama</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Advanced workflow tools</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Gelişmiş iş akışı araçları</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>In-depth analytics</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Detaylı analizler</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Priority email and phone support</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Öncelikli e-posta ve telefon desteği</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Integration with third-party tools</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Üçüncü parti araçlarla entegrasyon</span>
                             </li>
                         </ul>
-                        <Button className='mt-8 w-full'>Upgrade now</Button>
+                        <Button className='mt-8 w-full'>Yükselt</Button>
                     </div>
                     <div className='gradient-border relative max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-br from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-br before:from-primary/30 before:to-primary/5 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
                             <p>Premium</p>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
-                                    $
+                                    ₺
                                 </span>
                                 <span className='flex items-center gap-2 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
                                     {checked ? '699' : '69'}
                                     {checked && (
                                         <Badge variant={'outline'}>
-                                            SAVE 15%
+                                            %15 İNDİRİM
                                         </Badge>
                                     )}
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Comprehensive solutions for enterprises
+                                Kuruluşlar için kapsamlı çözümler
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4 text-left'>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Unlimited team members</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Sınırsız kullanıcı</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>1TB of cloud storage</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>1TB bulut depolama</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Customizable options</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Özelleştirilebilir seçenekler</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Dedicated account manager</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Özel hesap yöneticisi</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>24/7 priority support</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>7/24 öncelikli destek</span>
                             </li>
                             <li className='flex gap-2'>
-                                <CheckIcon className='5 mt-0.5 shrink-0 text-primary' />
-                                <span>Advanced security features</span>
+                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
+                                <span>Gelişmiş güvenlik özellikleri</span>
                             </li>
                         </ul>
                         <Button className='mt-8 w-full' variant={'outline'}>
-                            Contact us
+                            Bizimle iletişime geçin
                         </Button>
                     </div>
                 </div>
