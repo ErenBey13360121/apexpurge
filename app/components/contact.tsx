@@ -1,10 +1,11 @@
+import React from 'react'
 import { LinkedinIcon, Loader2Icon, TwitterIcon } from 'lucide-react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 // import Discord from './icons/discord'
-import Whatsapp from './icons/whatsapp' // Yeni eklenen WhatsApp iconu
+import Whatsapp from './icons/Whatsapp' // Dosya adı büyük harf olduğu için import'u da büyük harf
 import { useForm } from '@formspree/react'
 
 const Contact = () => {
@@ -41,7 +42,7 @@ const Contact = () => {
                     <div className='flex flex-col gap-4 lg:items-start'>
                         {/* 
                         <a
-                            href='https://twitter.com/NaderFerjani'
+                            href='https://twitter.com/NaderFerjani  '
                             className='inline-flex gap-2'
                             target='_blank'
                             rel='noopener noreferrer'
@@ -50,7 +51,7 @@ const Contact = () => {
                             <span>Nader Ferjani</span>
                         </a>
                         <a
-                            href='https://www.linkedin.com/in/nader-ferjani/'
+                            href='https://www.linkedin.com/in/nader-ferjani/  '
                             className='flex items-center gap-2'
                             target='_blank'
                             rel='noopener noreferrer'
