@@ -3,7 +3,8 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
-import Discord from './icons/discord'
+// import Discord from './icons/discord'
+import Whatsapp from './icons/whatsapp' // Yeni eklenen WhatsApp iconu
 import { useForm } from '@formspree/react'
 
 const Contact = () => {
@@ -14,37 +15,39 @@ const Contact = () => {
                 <div>
                     <h1 className='mt-4 scroll-m-20 text-center font-inter text-4xl font-extrabold tracking-tight lg:text-left lg:text-5xl'>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            Get{' '}
+                            İletişime{' '}
                         </span>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            In{' '}
-                        </span>
-                        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            Touch
+                            Geçin
                         </span>
                     </h1>
                 </div>
                 <p className='text-center text-lg text-muted-foreground lg:text-left'>
-                    <span className='hidden lg:block'>
-                        If you have any questions, suggestions, or would like to
-                        discuss potential collaborations, please don't hesitate
-                        to reach out. I'd love to hear from you!
+                    <span className='hidden lg:block text-base leading-relaxed'>
+                        Herhangi bir sorunuz, öneriniz varsa ya da<br />
+                        olası iş birliklerini konuşmak istiyorsanız,<br />
+                        lütfen çekinmeden iletişime geçin.<br />
+                        <br />
+                        Sizinle tanışmak ve fikirlerinizi duymak<br />
+                        beni çok mutlu eder!
                     </span>
-                    <span className='block lg:hidden'>
-                        Questions, ideas, or collaborations? Reach out—I'm all
-                        ears!
+
+                    <span className='block lg:hidden text-base font-medium text-center px-4'>
+                        Sorularınız mı var? Fikirleriniz mi? İş birliği mi?<br />
+                        Ulaşın — dikkatle dinliyorum!
                     </span>
                 </p>
                 <div className='flex justify-center lg:justify-start'>
                     <div className='flex flex-col gap-4 lg:items-start'>
+                        {/* 
                         <a
                             href='https://twitter.com/NaderFerjani'
                             className='inline-flex gap-2'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <TwitterIcon className='h-6 w-6 text-primary' />{' '}
-                            @NaderFerjani
+                            <TwitterIcon className='h-6 w-6 text-primary' />
+                            <span>Nader Ferjani</span>
                         </a>
                         <a
                             href='https://www.linkedin.com/in/nader-ferjani/'
@@ -52,13 +55,19 @@ const Contact = () => {
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <LinkedinIcon className='h-6 w-6 text-primary' />{' '}
-                            <span>nader-ferjani</span>
+                            <LinkedinIcon className='h-6 w-6 text-primary' />
+                            <span>Eren Akdeniz</span>
                         </a>
-                        <span className='flex items-center gap-2'>
-                            <Discord className='h-6 w-6 fill-primary' />{' '}
-                            <span>stormynight9</span>
-                        </span>
+                        */}
+                        <a
+                            href='https://wa.me/905437878579'
+                            className='flex items-center gap-2'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <Whatsapp className='h-6 w-6 fill-primary' />
+                            <span>0 543 787 85 79</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,13 +80,13 @@ const Contact = () => {
                         className='text-left text-muted-foreground'
                         htmlFor='name'
                     >
-                        Full name
+                        Adınız ve Soyadınız
                     </Label>
                     <Input
                         required
                         type='text'
                         id='name'
-                        placeholder='John Doe'
+                        placeholder='Adınız ve Soyadınız'
                         name='fullname'
                         className='w-full'
                     />
@@ -87,12 +96,12 @@ const Contact = () => {
                         className='text-left text-muted-foreground'
                         htmlFor='contact-email'
                     >
-                        Email
+                        E-posta Adresiniz
                     </Label>
                     <Input
                         required
                         type='email'
-                        placeholder='john.doe@example.com'
+                        placeholder='ornek@eposta.com'
                         name='contact-email'
                         id='contact-email'
                         className='w-full'
@@ -103,13 +112,14 @@ const Contact = () => {
                         htmlFor='message'
                         className='text-left text-muted-foreground'
                     >
-                        Message
+                        Mesajınız
                     </Label>
                     <Textarea
                         required
-                        placeholder='Your message here...'
+                        placeholder='Lütfen mesajınızı buraya yazınız...'
                         id='message'
                         name='message'
+                        rows={5}
                     />
                 </div>
                 {!state.succeeded && (
@@ -117,10 +127,7 @@ const Contact = () => {
                         {state.submitting && (
                             <Loader2Icon className='mr-2 h-4 w-4 animate-spin' />
                         )}
-                        {state.submitting && 'Sending'}
-                        {!state.succeeded &&
-                            !state.submitting &&
-                            'Send message'}
+                        {state.submitting ? 'Gönderiliyor' : 'Mesajı Gönder'}
                     </Button>
                 )}
                 {state.succeeded && (
@@ -128,7 +135,7 @@ const Contact = () => {
                         variant={'secondary'}
                         className='pointer-events-none'
                     >
-                        Message sent!
+                        Mesajınız gönderildi!
                     </Button>
                 )}
             </form>
