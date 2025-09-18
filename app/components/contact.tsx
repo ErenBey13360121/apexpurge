@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 // import Discord from './icons/discord'
-import Whatsapp from './icons/Whatsapp' // Dosya adı büyük harf olduğu için import'u da büyük harf
+import Whatsapp from './icons/Whatsapp.tsx'; // Dosya adı büyük harf olduğu için import'u da büyük harf
 import { useForm } from '@formspree/react'
 
 const Contact = () => {
