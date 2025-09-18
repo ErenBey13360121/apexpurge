@@ -715,8 +715,12 @@ export const themes = [
  * @description
  *   Tek bir tema nesnesinin yapısını tanımlar.
  */
-export type Theme =
-  (typeof themes)[number];
+ export type Theme =
+ (typeof themes)[number];
 
 /**
- * @typedef
+* @typedef ThemeName
+* @description
+*   Tüm tema isimlerinin union tipini tanımlar.
+*/
+export type ThemeName = Theme['name'];
