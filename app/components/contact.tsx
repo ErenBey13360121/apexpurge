@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 // import Discord from './icons/discord'
-// import Whatsapp from './icons/Whatsapp.tsx'; // Hata veren import satırı yorum satırına alındı.
+// import Whatsapp from './icons/whatsapp.tsx'; // Hata veren import satırı yorum satırına alındı.
 import { useForm } from '@formspree/react'
 
 const Contact = () => {
