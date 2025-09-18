@@ -8,7 +8,7 @@
  * • Tanıtım (landing) sayfasının kahraman (hero) bölümünü oluşturur.
  * • Dinamik tema renklerine (light/dark & 11+ tema) uygun olarak tipografi,
  *   ikon ve gradient geçişlerini yönetir.
- * • Formspree entegrasyonu ile “wait-list” e-posta toplar.
+ * • Formspree entegrasyonu ile "wait-list" e-posta toplar.
  * • Framer-motion kullanarak giriş animasyonları uygular.
  *
  * Kullanım Alanları
@@ -19,6 +19,7 @@
  * -------------------------------------------------------------------------- */
 
 /* ────────────────────────  1. DIŞ BAĞIMLILIKLAR  ─────────────────────────── */
+import React from 'react'
 import { useForm }                        from '@formspree/react'      // 📧 Form yönetimi
 import { motion }                         from 'framer-motion'         // 🎬 Animasyonlar
 import { Loader2Icon, MoveRightIcon }     from 'lucide-react'          // 🖼  İkon seti
@@ -49,8 +50,7 @@ const Hero = () => {
   /* --------------------------------------------------------------------- */
   return (
     <main
-      className='mx-auto my-10 flex min-h-[calc(100vh-73px)] max-w-2xl
-                 flex-col justify-center gap-6 px-5 text-center lg:my-0'
+      className='mx-auto my-10 flex min-h-[calc(100vh-73px)] max-w-2xl flex-col justify-center gap-6 px-5 text-center lg:my-0'
     >
       {/* --------------------------------------------------------------
        *  1) Başlık
@@ -65,27 +65,22 @@ const Hero = () => {
         )}
       >
         {/* Metin parçaları – gradient efekti bozulmaması için ayrı span'ler */}
-        <span className='bg-gradient-to-b from-foreground to-foreground/70
-                         bg-clip-text text-transparent'>
+        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
           Apex Purge'in
         </span>{' '}
-        <span className='bg-gradient-to-b from-foreground to-foreground/70
-                         bg-clip-text text-transparent'>
+        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
           Gücünü{' '}
         </span>
-        <span className='bg-gradient-to-b from-foreground to-foreground/70
-                         bg-clip-text text-transparent'>
+        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
           Keşfedin{' '}
         </span>
-        <span className='bg-gradient-to-b from-foreground to-foreground/70
-                         bg-clip-text text-transparent'>
-          {/* Boş bırakıldı – dil akışını korumak için */ }
+        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
+          {/* Boş bırakıldı – dil akışını korumak için */}
         </span>
         {/* Tema bazlı dinamik gradient vurgusu */}
         <span
           className={cn(
-            'relative bg-gradient-to-r from-primary bg-clip-text'
-             text-5xl font-extrabold text-transparent lg:text-8xl',
+            'relative bg-gradient-to-r from-primary bg-clip-text text-5xl font-extrabold text-transparent lg:text-8xl',
             theme === 'orange'  && 'to-rose-600',
             theme === 'blue'    && 'to-purple-600',
             theme === 'green'   && 'to-emerald-600',
@@ -131,8 +126,7 @@ const Hero = () => {
         viewport    = {{ once: true }}
         transition  = {{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
         onSubmit    = {handleSubmit}
-        className   = 'mx-auto mt-8 flex w-full max-w-sm flex-col
-                       items-end space-y-2'
+        className   = 'mx-auto mt-8 flex w-full max-w-sm flex-col items-end space-y-2'
       >
         {/* Email input -------------------------------------------------- */}
         <div className='flex w-full max-w-sm flex-col items-start gap-1.5'>
@@ -208,8 +202,7 @@ const Hero = () => {
           whileInView = {{ opacity: 1, y: 0 }}
           viewport    = {{ once: true }}
           transition  = {{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
-          className   = 'mx-auto h-56 w-[1px] rounded-full
-                         bg-gradient-to-b from-transparent to-primary'
+          className   = 'mx-auto h-56 w-[1px] rounded-full bg-gradient-to-b from-transparent to-primary'
         />
       )}
 
