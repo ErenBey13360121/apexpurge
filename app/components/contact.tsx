@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
 // import Discord from './icons/discord'
-import Whatsapp from './icons/Whatsapp.tsx'; // Dosya adı büyük harf olduğu için import'u da büyük harf
+// import Whatsapp from './icons/Whatsapp.tsx'; // Hata veren import satırı yorum satırına alındı.
 import { useForm } from '@formspree/react'
 
 const Contact = () => {
@@ -60,6 +60,8 @@ const Contact = () => {
                             <span>Eren Akdeniz</span>
                         </a>
                         */}
+                        
+                        {/* Whatsapp ikonu ve linki yorum satırına alındı.
                         <a
                             href='https://wa.me/905437878579'
                             className='flex items-center gap-2'
@@ -69,6 +71,7 @@ const Contact = () => {
                             <Whatsapp className='h-6 w-6 fill-primary' />
                             <span>0 543 787 85 79</span>
                         </a>
+                        */}
                     </div>
                 </div>
             </div>
