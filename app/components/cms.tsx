@@ -1,9 +1,9 @@
 import React from 'react'
-import Nextjs from '~/components/icons/nextjs'
-import Remix from '~/components/icons/remixlogo'
-import Shadcn from '~/components/icons/shadcn'
-import Supercharged from '~/components/icons/supercharged'
-import Tailwindcss from '~/components/icons/tailwindcss'
+// import Nextjs from '~/components/icons/nextjs'
+// import Remix from '~/components/icons/remixlogo'
+// import Shadcn from '~/components/icons/shadcn'
+// import Supercharged from '~/components/icons/supercharged'
+// import Tailwindcss from '~/components/icons/tailwindcss'
 import {
     Tooltip,
     TooltipContent,
@@ -13,26 +13,26 @@ import {
 
 const Cms = () => {
     const cms = [
-        {
-            component: <Tailwindcss height={60} width={60} />,
-            name: 'Tailwind CSS',
-        },
-        {
-            component: <Nextjs height={60} width={60} />,
-            name: 'Next.js',
-        },
-        {
-            component: <Remix height={60} width={60} />,
-            name: 'Remix',
-        },
-        {
-            component: <Shadcn height={60} width={60} />,
-            name: 'shadcn/ui',
-        },
-        {
-            component: <Supercharged height={60} width={60} />,
-            name: 'Supercharged',
-        },
+        // {
+        //     component: <Tailwindcss height={60} width={60} />,
+        //     name: 'Tailwind CSS',
+        // },
+        // {
+        //     component: <Nextjs height={60} width={60} />,
+        //     name: 'Next.js',
+        // },
+        // {
+        //     component: <Remix height={60} width={60} />,
+        //     name: 'Remix',
+        // },
+        // {
+        //     component: <Shadcn height={60} width={60} />,
+        //     name: 'shadcn/ui',
+        // },
+        // {
+        //     component: <Supercharged height={60} width={60} />,
+        //     name: 'Supercharged',
+        // },
     ]
 
     return (
