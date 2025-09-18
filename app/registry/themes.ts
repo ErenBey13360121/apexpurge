@@ -1,4 +1,4 @@
-typescriptDownloadCopy code Wrap/**
+/**
  * @file theme.ts
  * @module Themes
  *
