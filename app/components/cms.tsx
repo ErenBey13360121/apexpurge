@@ -1,13 +1,4 @@
 import React from 'react'
-// import Drupal from '~/components/icons/drupal'
-// import Framer from '~/components/icons/framer'
-// import Joomla from '~/components/icons/joomla'
-// import Notion from '~/components/icons/notion'
-// import Sanity from '~/components/icons/sanity'
-// import Storyblok from '~/components/icons/storyblok'
-// import Strapi from '~/components/icons/strapi'
-// import Typedream from '~/components/icons/typedream'
-// import Wordpress from '~/components/icons/wordpress'
 import Nextjs from '~/components/icons/nextjs'
 import Remix from '~/components/icons/remixlogo'
 import Shadcn from '~/components/icons/shadcn'
@@ -23,23 +14,23 @@ import {
 const Cms = () => {
     const cms = [
         {
-            component: <Tailwindcss height={42} width={42} />,
+            component: <Tailwindcss height={60} width={60} />,
             name: 'Tailwind CSS',
         },
         {
-            component: <Nextjs height={42} width={42} />,
+            component: <Nextjs height={60} width={60} />,
             name: 'Next.js',
         },
         {
-            component: <Remix height={42} width={42} />,
+            component: <Remix height={60} width={60} />,
             name: 'Remix',
         },
         {
-            component: <Shadcn height={42} width={42} />,
+            component: <Shadcn height={60} width={60} />,
             name: 'shadcn/ui',
         },
         {
-            component: <Supercharged height={42} width={42} />,
+            component: <Supercharged height={60} width={60} />,
             name: 'Supercharged',
         },
     ]
@@ -56,7 +47,7 @@ const Cms = () => {
                             <Tooltip>
                                 <TooltipTrigger
                                     aria-label={item.name}
-                                    className='cursor-default'
+                                    className='cursor-default flex items-center justify-center'
                                 >
                                     {item.component}
                                 </TooltipTrigger>
