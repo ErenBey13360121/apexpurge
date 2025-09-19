@@ -1,6 +1,6 @@
 import React from 'react'
 import Nextjs from '~/components/icons/nextjs'
-import Remix from '~/components/icons/remixlogo'
+// import Remix from '~/components/icons/remixlogo' // Remix logosu gizlendi
 import Shadcn from '~/components/icons/shadcn'
 import Supercharged from '~/components/icons/supercharged'
 import Tailwindcss from '~/components/icons/tailwindcss'
@@ -14,23 +14,25 @@ import {
 const Cms = () => {
     const cms = [
         {
-            component: <Tailwindcss height={100} width={100} fill="white" />,
+            component: <Tailwindcss height={300} width={300} fill="white" />,
             name: 'Tailwind CSS',
         },
         {
-            component: <Nextjs height={100} width={100} fill="white" />,
+            component: <Nextjs height={300} width={300} fill="white" />,
             name: 'Next.js',
         },
+        /* Remix logosu gizlendi
         {
-            component: <Remix height={100} width={100} fill="white" />,
+            component: <Remix height={300} width={300} fill="white" />,
             name: 'Remix',
         },
+        */
         {
-            component: <Shadcn height={100} width={100} fill="white" />,
+            component: <Shadcn height={300} width={300} fill="white" />,
             name: 'shadcn/ui',
         },
         {
-            component: <Supercharged height={100} width={100} fill="white" />,
+            component: <Supercharged height={300} width={300} fill="white" />,
             name: 'Supercharged',
         },
     ]

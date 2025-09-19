@@ -6,18 +6,9 @@ const Footer = () => {
       <div className='p-5 text-center'>
         <span className='font-bold italic text-primary brightness-150'>Eren Akdeniz</span> tarafından{' '}
         <span className='font-bold italic text-primary brightness-150'>
-          TypeScript, JavaScript, React, TSX, Next.js, Tailwind CSS ve shadcn/ui
+          TypeScript • Next.js • React Native • Tailwind CSS • SHADCN/UI
         </span>{' '}
-        kullanılarak geliştirildi.{' '}
-        <span className='whitespace-nowrap'>
-          <a
-            href='mailto:erenakdeniz@icloud.com'
-            className='font-bold italic text-primary brightness-150 hover:brightness-150'
-          >
-            erenakdeniz@icloud.com
-          </a>{' '}
-          🔥
-        </span>
+        kullanılarak geliştirildi.
       </div>
       <div className='mt-auto h-[1px] w-full bg-gradient-to-r from-transparent via-primary to-transparent'></div>
     </footer>

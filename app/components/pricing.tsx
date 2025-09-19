@@ -10,6 +10,12 @@ import { Badge } from './ui/badge'
 const Pricing = () => {
     const [checked, setChecked] = useState(false)
 
+    // Yeni fiyatlar burada tanımlanıyor
+    const accelerateMonthly = 1160
+    const accelerateAnnual = accelerateMonthly * 8
+    const apexMonthly = 2760
+    const apexAnnual = apexMonthly * 8
+
     return (
         <section className='mx-auto mb-8 mt-48 px-5 dark:bg-[radial-gradient(ellipse_40%_50%_at_50%_-20%,hsla(var(--primary)_/_30%),#ffffff00)]'>
             <div className='mx-auto mb-16 h-[1px] w-full max-w-2xl bg-gradient-to-r from-transparent via-primary to-transparent'></div>
@@ -17,23 +23,20 @@ const Pricing = () => {
                 <div>
                     <span className='rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:bg-primary/25'>
                         <span className='brightness-[1.7]'>
-                            Esnek Fiyatlandırma
+                            Zirveye Giden Yatırım
                         </span>
                     </span>
                     <h1 className='mt-4 scroll-m-20 font-inter text-4xl font-extrabold tracking-tight lg:text-5xl'>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            Size uygun{' '}
+                            Zirve Yolculuğunuz{' '}
                         </span>
                         <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            planı{' '}
-                        </span>
-                        <span className='bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent'>
-                            seçin
+                            Burada Başlıyor
                         </span>
                     </h1>
                 </div>
                 <p className='text-lg text-muted-foreground'>
-                    İş ihtiyaçlarınıza en uygun planı seçin
+                    Her ölçekteki lider için tasarlanmış, büyümenize uyum sağlayan esnek ve güçlü planlar.
                 </p>
                 <div className='mt-20 flex items-center justify-center space-x-2'>
                     <Label
@@ -54,13 +57,15 @@ const Pricing = () => {
                         htmlFor='price-toggle'
                         className={cn(!checked && 'text-muted-foreground')}
                     >
-                        Yıllık
+                        Yıllık (Sadece 8 Ay Fiyatı Ödeyin!)
                     </Label>
                 </div>
                 <div className='mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-around lg:px-6'>
+                    
+                    {/* --- PLAN 1: LAUNCH --- */}
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-bl from-primary/10 via-transparent to-transparent p-8 text-left before:bg-gradient-to-bl before:from-primary/30 before:to-primary/5 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
-                            <p>Temel</p>
+                            <p className='text-xl font-semibold'>LAUNCH</p>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
                                     ₺
@@ -70,135 +75,78 @@ const Pricing = () => {
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Girişimler ve küçük işletmeler için ideal
+                                Zirveye ilk adımı atan ekipler ve girişimler için.
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4'>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>10 kullanıcıya kadar</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>50GB bulut depolama</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Kolaylaştırılmış işlemler</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>İş akışı optimizasyonu</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Temel analizler</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>E-posta desteği</span>
-                            </li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**5 Kullanıcı**ya Kadar</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Proje ve Görev Yönetimi</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**Temel** İş Akışı Otomasyonu (5 kural)</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Performans Gösterge Paneli</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>50 GB Güvenli Bulut Depolama</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Topluluk ve E-posta Desteği</span></li>
                         </ul>
                         <Button className='mt-8 w-full' variant={'outline'}>
-                            Başlayın
+                            Yolculuğa Başla
                         </Button>
                     </div>
+
+                    {/* --- PLAN 2: ACCELERATE --- */}
                     <div className='gradient-border relative w-full max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-b from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-b before:from-primary before:to-primary/10 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
-                            <p>Profesyonel</p>
+                            <div className='flex items-center gap-2'>
+                                <p className='text-xl font-semibold'>ACCELERATE</p>
+                                <Badge>EN POPÜLER</Badge>
+                            </div>
                             <div className='flex items-start gap-2'>
                                 <span className='text-2xl text-muted-foreground'>
                                     ₺
                                 </span>
                                 <span className='flex items-center gap-2 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
-                                    {checked ? '299' : '29'}
-                                    {checked && (
-                                        <Badge variant={'outline'}>
-                                            %15 İNDİRİM
-                                        </Badge>
-                                    )}
+                                    {checked ? accelerateAnnual.toLocaleString('tr-TR') : accelerateMonthly.toLocaleString('tr-TR')}
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Büyüyen işletmeler için mükemmel
+                                Pazarında ivme kazanmak ve rekabette öne geçmek için.
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4 text-left'>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>50 kullanıcıya kadar</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>250GB bulut depolama</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Gelişmiş iş akışı araçları</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Detaylı analizler</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Öncelikli e-posta ve telefon desteği</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Üçüncü parti araçlarla entegrasyon</span>
-                            </li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**50 Kullanıcı**ya Kadar</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**Gelişmiş** İş Akışı Otomasyonu (Sınırsız)</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Detaylı Analiz ve Raporlama</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Tüm 3. Parti Entegrasyonlar</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>500 GB Güvenli Bulut Depolama</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Öncelikli E-posta ve Canlı Destek</span></li>
                         </ul>
-                        <Button className='mt-8 w-full'>Yükselt</Button>
+                        <Button className='mt-8 w-full'>Planı Seç</Button>
                     </div>
+
+                    {/* --- PLAN 3: APEX --- */}
                     <div className='gradient-border relative max-w-sm flex-grow basis-0 rounded-md bg-gradient-to-br from-primary/10 via-transparent to-transparent p-8 before:bg-gradient-to-br before:from-primary/30 before:to-primary/5 lg:max-w-none'>
                         <div className='flex flex-col gap-3 text-left'>
-                            <p>Premium</p>
+                            <p className='text-xl font-semibold'>APEX</p>
                             <div className='flex items-start gap-2'>
-                                <span className='text-2xl text-muted-foreground'>
+                                 <span className='text-2xl text-muted-foreground'>
                                     ₺
                                 </span>
                                 <span className='flex items-center gap-2 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-5xl font-medium text-transparent'>
-                                    {checked ? '699' : '69'}
-                                    {checked && (
-                                        <Badge variant={'outline'}>
-                                            %15 İNDİRİM
-                                        </Badge>
-                                    )}
+                                    {checked ? apexAnnual.toLocaleString('tr-TR') : apexMonthly.toLocaleString('tr-TR')}
                                 </span>
                             </div>
                             <p className='text-muted-foreground'>
-                                Kuruluşlar için kapsamlı çözümler
+                                Sektör standardını belirlemek ve pazar lideri olmak için.
                             </p>
                         </div>
                         <ul className='mt-8 flex flex-col gap-4 text-left'>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Sınırsız kullanıcı</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>1TB bulut depolama</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Özelleştirilebilir seçenekler</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Özel hesap yöneticisi</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>7/24 öncelikli destek</span>
-                            </li>
-                            <li className='flex gap-2'>
-                                <CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' />
-                                <span>Gelişmiş güvenlik özellikleri</span>
-                            </li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**Sınırsız Kullanıcı**</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>**Yapay Zeka** Destekli Öngörüsel Analiz</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Özelleştirilebilir API Erişimi</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Kurumsal Düzeyde Güvenlik (SSO)</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>Size Özel Stratejik Ortak</span></li>
+                            <li className='flex gap-2'><CheckIcon className='mt-0.5 h-5 w-5 shrink-0 text-primary' /><span>7/24 Kapsamlı Destek Hattı</span></li>
                         </ul>
                         <Button className='mt-8 w-full' variant={'outline'}>
-                            Bizimle iletişime geçin
+                            Özel Teklif Alın
                         </Button>
                     </div>
                 </div>
