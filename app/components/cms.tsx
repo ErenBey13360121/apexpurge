@@ -1,9 +1,4 @@
 import React from 'react'
-// import Nextjs from '~/components/icons/nextjs'
-// import Remix from '~/components/icons/remixlogo'
-// import Shadcn from '~/components/icons/shadcn'
-// import Supercharged from '~/components/icons/supercharged'
-// import Tailwindcss from '~/components/icons/tailwindcss'
 import {
     Tooltip,
     TooltipContent,
@@ -13,24 +8,25 @@ import {
 
 const Cms = () => {
     const cms = [
+        {
+            src: '/icons/tailwindcss.svg',
+            name: 'Tailwind CSS',
+        },
+        // Diğer ikonları da aynı şekilde ekleyebilirsin:
         // {
-        //     component: <Tailwindcss height={60} width={60} />,
-        //     name: 'Tailwind CSS',
-        // },
-        // {
-        //     component: <Nextjs height={60} width={60} />,
+        //     src: '/icons/nextjs.svg',
         //     name: 'Next.js',
         // },
         // {
-        //     component: <Remix height={60} width={60} />,
+        //     src: '/icons/remix.svg',
         //     name: 'Remix',
         // },
         // {
-        //     component: <Shadcn height={60} width={60} />,
+        //     src: '/icons/shadcn.svg',
         //     name: 'shadcn/ui',
         // },
         // {
-        //     component: <Supercharged height={60} width={60} />,
+        //     src: '/icons/supercharged.svg',
         //     name: 'Supercharged',
         // },
     ]
@@ -49,7 +45,13 @@ const Cms = () => {
                                     aria-label={item.name}
                                     className='cursor-default flex items-center justify-center'
                                 >
-                                    {item.component}
+                                    <img
+                                        src={item.src}
+                                        alt={item.name}
+                                        width={60}
+                                        height={60}
+                                        className='h-15 w-15'
+                                    />
                                 </TooltipTrigger>
                                 <TooltipContent side='bottom'>
                                     <p>{item.name}</p>
